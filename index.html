@@ -643,64 +643,19 @@ html{
   <!-- ===================================================== -->
 
   <section class="section-card" id="section1">
-
-    <div class="section-head">
+<div class="section-head">
 
       <div class="section-number">
         1-БӨЛІМ
       </div>
-
-      <div class="section-title">
-        Мемлекет және құқық теориясының пәні және әдістері
-      </div>
-
-      <div class="section-info">
-        Кітаптың 5–10-беттері
-      </div>
-
-      <div class="progress-wrap">
-
-        <div class="progress-text">
-          <span>Прогресс</span>
-          <span id="progressText1">0 / 35</span>
-        </div>
-
-        <div class="progress">
-          <div class="progress-fill" id="progressFill1"></div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="questions" id="questions1"></div>
-
+    <div class="questions" id="section1Questions"></div>
 
     <div class="section-actions">
-
-      <button
-        class="show-result"
-        onclick="showSectionResult(1)">
-        Нәтижені көрсету
-      </button>
-
-      <div class="result-box" id="result1">
-
-        <div class="result-score" id="score1"></div>
-
-        <div class="result-percent" id="percent1"></div>
-
-        <button
-          class="reset-btn"
-          onclick="resetSection(1)">
-          Қайта тапсыру
-        </button>
-
-      </div>
-
+      <button class="btn primary" type="button" onclick="showSection1Results()">Нәтижені көрсету</button>
+      <button class="btn" type="button" onclick="resetSection1()">Қайта бастау</button>
     </div>
 
+    <div class="result" id="section1Result"></div>
   </section>
 
 </div>
