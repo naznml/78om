@@ -1576,7 +1576,12 @@ function loadProgress(){
    САЙТТЫ ІСКЕ ҚОСУ
    ========================================================= */
 
-loadProgress();
+/* Тесттер сайт ашылған сайын таза күйде басталады.
+   Бұрынғы localStorage нәтижелері автоматты түрде жүктелмейді. */
+Object.keys(sections).forEach(id => {
+  sections[id].answers = Array(sections[id].questions.length).fill(null);
+  sections[id].finished = false;
+});
 
 renderSection(1);
 
