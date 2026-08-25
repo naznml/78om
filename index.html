@@ -322,6 +322,164 @@ h1{
     font-size:14px;
   }
 }
+
+html{
+  scroll-behavior:smooth;
+}
+
+.section-card{
+  scroll-margin-top:12px;
+}
+
+.section-nav-wrap{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:13px;
+  margin-bottom:16px;
+}
+
+.section-nav-title{
+  font-size:13px;
+  font-weight:850;
+  margin-bottom:9px;
+}
+
+.section-nav{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:7px;
+}
+
+.section-nav a{
+  min-height:48px;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 9px;
+  border:1px solid var(--line);
+  border-radius:11px;
+  background:#fafbfe;
+  color:var(--text);
+  text-decoration:none;
+  font-size:11.5px;
+  font-weight:700;
+  line-height:1.25;
+  transition:.15s;
+}
+
+.section-nav a:hover,
+.section-nav a:active{
+  border-color:#aebaf0;
+  background:var(--accent-soft);
+}
+
+.section-nav-num{
+  flex:0 0 auto;
+  width:22px;
+  height:22px;
+  border-radius:7px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:10px;
+  font-weight:900;
+}
+
+.important-concepts{
+  padding:13px 18px 15px;
+  border-bottom:1px solid var(--line);
+  background:#fbfcff;
+}
+
+.important-concepts-title{
+  font-size:12px;
+  font-weight:850;
+  color:#4e5666;
+  margin-bottom:8px;
+}
+
+.concept-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+}
+
+.concept-chip{
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:5px 9px;
+  border:1px solid #dfe4f7;
+  border-radius:999px;
+  background:#fff;
+  color:#39435f;
+  font-size:11.5px;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.to-top{
+  position:fixed;
+  right:16px;
+  bottom:16px;
+  width:38px;
+  height:38px;
+  border:none;
+  border-radius:50%;
+  background:var(--accent);
+  color:#fff;
+  font-size:19px;
+  font-weight:900;
+  line-height:38px;
+  text-align:center;
+  box-shadow:0 7px 18px rgba(25,42,105,.22);
+  cursor:pointer;
+  z-index:999;
+  opacity:.92;
+}
+
+.to-top:active{
+  transform:scale(.96);
+}
+
+@media(max-width:780px){
+  .section-nav{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+
+@media(max-width:520px){
+  .section-nav{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .section-nav a{
+    min-height:44px;
+    font-size:11px;
+    padding:7px 8px;
+  }
+
+  .important-concepts{
+    padding:12px 14px 14px;
+  }
+
+  .concept-chip{
+    font-size:11px;
+    padding:5px 8px;
+  }
+
+  .to-top{
+    width:36px;
+    height:36px;
+    right:12px;
+    bottom:12px;
+    line-height:36px;
+  }
+}
+
 </style>
 </head>
 
@@ -344,6 +502,108 @@ h1{
     </div>
   </div>
 
+
+  <div class="section-nav-wrap" id="sectionNavigation">
+    <div class="section-nav-title">Бөлімдер</div>
+    <nav class="section-nav" aria-label="Бөлімдер навигациясы">
+    <a href="#section1" aria-label="1-бөлім: Мемлекет және құқық теориясының пәні және әдістері">
+      <span class="section-nav-num">1</span>
+      <span>Мемлекет және құқық теориясының пәні және әдістері</span>
+    </a>
+    <a href="#section2" aria-label="2-бөлім: Мемлекеттің пайда болуы">
+      <span class="section-nav-num">2</span>
+      <span>Мемлекеттің пайда болуы</span>
+    </a>
+    <a href="#section3" aria-label="3-бөлім: Мемлекет түсінігі, мәні және белгілері">
+      <span class="section-nav-num">3</span>
+      <span>Мемлекет түсінігі, мәні және белгілері</span>
+    </a>
+    <a href="#section4" aria-label="4-бөлім: Мемлекеттің типологиясы">
+      <span class="section-nav-num">4</span>
+      <span>Мемлекеттің типологиясы</span>
+    </a>
+    <a href="#section5" aria-label="5-бөлім: Мемлекет нысаны">
+      <span class="section-nav-num">5</span>
+      <span>Мемлекет нысаны</span>
+    </a>
+    <a href="#section6" aria-label="6-бөлім: Мемлекеттің атқаратын қызметтері">
+      <span class="section-nav-num">6</span>
+      <span>Мемлекеттің атқаратын қызметтері</span>
+    </a>
+    <a href="#section7" aria-label="7-бөлім: Мемлекет тетігі">
+      <span class="section-nav-num">7</span>
+      <span>Мемлекет тетігі</span>
+    </a>
+    <a href="#section8" aria-label="8-бөлім: Қоғамның саяси жүйесіндегі мемлекет">
+      <span class="section-nav-num">8</span>
+      <span>Қоғамның саяси жүйесіндегі мемлекет</span>
+    </a>
+    <a href="#section9" aria-label="9-бөлім: Азаматтық қоғам және құқықтық мемлекет">
+      <span class="section-nav-num">9</span>
+      <span>Азаматтық қоғам және құқықтық мемлекет</span>
+    </a>
+    <a href="#section10" aria-label="10-бөлім: Құқықтың түсінігі, мәні және пайда болуы">
+      <span class="section-nav-num">10</span>
+      <span>Құқықтың түсінігі, мәні және пайда болуы</span>
+    </a>
+    <a href="#section11" aria-label="11-бөлім: Әлеуметтік нормалар жүйесіндегі құқық">
+      <span class="section-nav-num">11</span>
+      <span>Әлеуметтік нормалар жүйесіндегі құқық</span>
+    </a>
+    <a href="#section12" aria-label="12-бөлім: Құқық нормасы: түсінігі, түрлері және құрылымы">
+      <span class="section-nav-num">12</span>
+      <span>Құқық нормасы: түсінігі, түрлері және құрылымы</span>
+    </a>
+    <a href="#section13" aria-label="13-бөлім: Құқықтың қайнар көздері">
+      <span class="section-nav-num">13</span>
+      <span>Құқықтың қайнар көздері</span>
+    </a>
+    <a href="#section14" aria-label="14-бөлім: Құқық жүйесі">
+      <span class="section-nav-num">14</span>
+      <span>Құқық жүйесі</span>
+    </a>
+    <a href="#section15" aria-label="15-бөлім: Қазіргі заманғы құқықтық жүйелер">
+      <span class="section-nav-num">15</span>
+      <span>Қазіргі заманғы құқықтық жүйелер</span>
+    </a>
+    <a href="#section16" aria-label="16-бөлім: Құқықтық қатынастар">
+      <span class="section-nav-num">16</span>
+      <span>Құқықтық қатынастар</span>
+    </a>
+    <a href="#section17" aria-label="17-бөлім: Құқық шығармашылығы және құқықты жүйелеу">
+      <span class="section-nav-num">17</span>
+      <span>Құқық шығармашылығы және құқықты жүйелеу</span>
+    </a>
+    <a href="#section18" aria-label="18-бөлім: Құқықтық сана және құқықтық мәдениет">
+      <span class="section-nav-num">18</span>
+      <span>Құқықтық сана және құқықтық мәдениет</span>
+    </a>
+    <a href="#section19" aria-label="19-бөлім: Құқықты жүзеге асыру">
+      <span class="section-nav-num">19</span>
+      <span>Құқықты жүзеге асыру</span>
+    </a>
+    <a href="#section20" aria-label="20-бөлім: Құқықтық реттеу тетігі және заңға сәйкес мінез-құлықтар">
+      <span class="section-nav-num">20</span>
+      <span>Құқықтық реттеу тетігі және заңға сәйкес мінез-құлықтар</span>
+    </a>
+    <a href="#section21" aria-label="21-бөлім: Құқықты талқылау">
+      <span class="section-nav-num">21</span>
+      <span>Құқықты талқылау</span>
+    </a>
+    <a href="#section22" aria-label="22-бөлім: Құқықтағы олқылықтар және оларды жою жолдары">
+      <span class="section-nav-num">22</span>
+      <span>Құқықтағы олқылықтар және оларды жою жолдары</span>
+    </a>
+    <a href="#section23" aria-label="23-бөлім: Заңдылық, құқықтық тәртіп және адам құқықтары">
+      <span class="section-nav-num">23</span>
+      <span>Заңдылық, құқықтық тәртіп және адам құқықтары</span>
+    </a>
+    <a href="#section24" aria-label="24-бөлім: Құқық бұзушылық және құқықтық жауапкершілік">
+      <span class="section-nav-num">24</span>
+      <span>Құқық бұзушылық және құқықтық жауапкершілік</span>
+    </a>
+    </nav>
+  </div>
 
   <!-- ===================================================== -->
   <!-- 1-БӨЛІМ -->
@@ -412,6 +672,12 @@ h1{
 
 </div>
 
+<button
+  class="to-top"
+  type="button"
+  aria-label="Жоғарыға"
+  title="Жоғарыға"
+  onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <script>
 
@@ -31853,6 +32119,68 @@ if(sections[24].finished){
    «МЕМЛЕКЕТ ЖӘНЕ ҚҰҚЫҚ ТЕОРИЯСЫ»
    БОЙЫНША БӨЛІМДІК ТЕСТТЕР АЯҚТАЛДЫ
    ========================================================= */
+
+
+/* =========================================================
+   МАҢЫЗДЫ ҰҒЫМДАР
+   ӘР БӨЛІМНІҢ ТЕСТІНІҢ АЛДЫНДА КӨРСЕТІЛЕДІ
+   ========================================================= */
+
+const importantConcepts = {
+  1: ["Мемлекет және құқық теориясы", "Пән", "Әдіс", "Диалектикалық әдіс", "Талдау", "Синтез", "Индукция", "Дедукция", "Функциялар"],
+  2: ["Алғашқы қауымдық құрылыс", "Ру", "Фратрия", "Тайпа", "Мононорма", "Неолиттік төңкеріс", "Теологиялық теория", "Патриархалдық теория", "Қоғамдық шарт теориясы", "Күштеу теориясы", "Психологиялық теория", "Материалистік теория"],
+  3: ["Мемлекет", "Мемлекеттік билік", "Егемендік", "Аумақ", "Халық", "Салық жүйесі", "Құқық", "Мемлекет тетігі"],
+  4: ["Мемлекет типологиясы", "Формациялық тәсіл", "Қоғамдық-экономикалық формация", "Құл иеленушілік мемлекет", "Феодалдық мемлекет", "Буржуазиялық мемлекет", "Социалистік мемлекет", "Өркениеттік тәсіл"],
+  5: ["Мемлекет нысаны", "Басқару нысаны", "Монархия", "Республика", "Мемлекеттік құрылым нысаны", "Унитарлық мемлекет", "Федерация", "Конфедерация", "Саяси режим"],
+  6: ["Мемлекет қызметі", "Мақсат", "Міндет", "Тұрақты қызмет", "Уақытша қызмет", "Ішкі қызмет", "Сыртқы қызмет", "Экономикалық қызмет", "Әлеуметтік қызмет", "Экологиялық қызмет"],
+  7: ["Мемлекет тетігі", "Мемлекеттік аппарат", "Мемлекеттік орган", "Мемлекеттік лауазым", "Мемлекеттік қызметші", "Саяси мемлекеттік қызметші", "Әкімшілік мемлекеттік қызметші", "Бюрократия", "Сыбайлас жемқорлық"],
+  8: ["Саяси жүйе", "Мемлекет", "Саяси партия", "Қоғамдық бірлестік", "Саяси плюрализм", "Саяси режим", "Демократия", "Оппозиция"],
+  9: ["Азаматтық қоғам", "Құқықтық мемлекет", "Құқық үстемдігі", "Билікті бөлу қағидасы", "Адам құқықтары", "Плюрализм", "Жеке меншік", "Заң алдындағы теңдік"],
+  10: ["Құқық", "Мононорма", "Құқықтың пайда болуы", "Табиғи құқық", "Позитивтік құқық", "Құқық белгілері", "Нормативистік теория", "Психологиялық теория", "Материалистік теория"],
+  11: ["Әлеуметтік норма", "Мораль нормасы", "Әдет-ғұрып", "Салт-дәстүр", "Діни норма", "Корпоративтік норма", "Құқық нормасы", "Техникалық норма"],
+  12: ["Құқық нормасы", "Гипотеза", "Диспозиция", "Санкция", "Императивтік норма", "Диспозитивтік норма", "Міндеттеуші норма", "Тыйым салушы норма", "Құқық беруші норма"],
+  13: ["Құқықтың қайнар көзі", "Нормативтік құқықтық акт", "Құқықтық әдет", "Сот прецеденті", "Нормативтік шарт", "Құқықтық доктрина", "Заң", "Заңға тәуелді акт"],
+  14: ["Құқық жүйесі", "Құқық саласы", "Құқық институты", "Құқық нормасы", "Жария құқық", "Жеке құқық", "Материалдық құқық", "Процессуалдық құқық"],
+  15: ["Құқықтық жүйе", "Құқықтық отбасы", "Романо-германдық құқықтық жүйе", "Англо-саксондық құқықтық жүйе", "Мұсылмандық құқықтық жүйе", "Дәстүрлі құқықтық жүйе", "Сот прецеденті", "Кодификация"],
+  16: ["Құқықтық қатынас", "Субъект", "Объект", "Субъективтік құқық", "Заңды міндет", "Құқықсубъектілік", "Құқық қабілеттілігі", "Әрекет қабілеттілігі", "Заңды факт"],
+  17: ["Құқық шығармашылығы", "Заң шығару", "Заң жобасы", "Заң шығару процесі", "Референдум", "Заң техникасы", "Құқықты жүйелеу", "Инкорпорация", "Консолидация", "Кодификация", "Лоббизм"],
+  18: ["Құқықтық сана", "Құқықтық онтология", "Құқықтық аксиология", "Құқықтық праксиология", "Құқықтық психология", "Құқықтық идеология", "Құқықтық мәдениет", "Құқықтық идеализм", "Құқықтық нигилизм", "Анархизм"],
+  19: ["Құқықты жүзеге асыру", "Құқықты орындау", "Құқықты пайдалану", "Құқықты сақтау", "Құқық қолдану", "Құқық қолдану актісі", "Жедел атқарушылық қызмет", "Құқық қорғаушылық қызмет"],
+  20: ["Құқықтық реттеу тетігі", "Диспозитивтік әдіс", "Императивтік әдіс", "Сендіру", "Мәжбүрлеу", "Ерік беру", "Тыйым салу", "Міндет жүктеу", "Құқыққа сай мінез-құлық", "Конформистік мінез-құлық", "Маргиналдық мінез-құлық"],
+  21: ["Құқықты талқылау", "Құқықты түсіну", "Құқықты түсіндіру", "Грамматикалық талқылау", "Логикалық талқылау", "Жүйелік талқылау", "Арнайы құқықтық талқылау", "Тарихи-саяси талқылау", "Телеологиялық талқылау", "Аутентикалық талқылау", "Легалдық талқылау", "Казуалдық талқылау"],
+  22: ["Құқықтағы олқылық", "Заң аналогиясы", "Құқық аналогиясы", "Құқықтағы қайшылық", "Нормативтік құқықтық актілер иерархиясы", "Халықаралық құқық нормасы", "Құқықтық реттеу", "Лоббизм"],
+  23: ["Заңдылық", "Заң үстемдігі", "Құқықтық тәртіп", "Адам құқықтары", "Табиғи құқықтар", "Саяси құқықтар", "Омбудсмен", "Адам құқықтары жөніндегі комиссия", "Халықаралық пакт"],
+  24: ["Құқық бұзушылық", "Теріс қылық", "Қылмыс", "Қылмыстық теріс қылық", "Құқық бұзушылық құрамы", "Объект", "Объективтік жақ", "Субъект", "Субъективтік жақ", "Кінә", "Қасақаналық", "Абайсыздық", "Құқықтық жауапкершілік", "Қажетті қорғаныс"]
+};
+
+function renderImportantConcepts(sectionId){
+  const card = document.getElementById(`section${sectionId}`);
+  if(!card || card.querySelector(".important-concepts")) return;
+
+  const questionBox = card.querySelector(".questions");
+  if(!questionBox) return;
+
+  const items = importantConcepts[sectionId] || [];
+  if(!items.length) return;
+
+  const chips = items
+    .map(term => `<span class="concept-chip">${term}</span>`)
+    .join("");
+
+  questionBox.insertAdjacentHTML(
+    "beforebegin",
+    `
+      <div class="important-concepts">
+        <div class="important-concepts-title">Маңызды ұғымдар</div>
+        <div class="concept-chips">${chips}</div>
+      </div>
+    `
+  );
+}
+
+Object.keys(importantConcepts).forEach(id => {
+  renderImportantConcepts(Number(id));
+});
 
 </script>
 </body>
